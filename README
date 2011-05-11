@@ -1,0 +1,10 @@
+In order to reproduce this issue, using jruby 1.6.1 in 1.9 mode:
+
+gem install bundler
+bundle install
+JRUBY_OPTS='--1.9' ./test.rb
+
+
+You should see the following error:
+
+NoMethodError: undefined method `read_nonblock' for #<OpenSSL::SSL::SSLSocket:0x26137fea>
